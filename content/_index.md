@@ -126,7 +126,7 @@ sections:
     design:
       columns: '2'
   - block: team
-    id: people
+    id: team
     content:
       title: Meet the Team
       user_group:
