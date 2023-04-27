@@ -125,7 +125,7 @@ sections:
       title: Popular Topics
     design:
       columns: '2'
-  - block: people
+  - block: team
     id: people
     content:
       title: Meet the Team
