@@ -1,0 +1,33 @@
+{{/* team */}}
+{{ if .Params.id }}<div id="{{ .Params.id }}"> {{ end }}
+
+  <div class="widget-wrap">
+    {{ if .Params.content.title }}
+    <h2 class="widget-title">{{ .Params.content.title }}</h2>
+    {{ end }}
+    {{ if .Params.content.sub_title }}
+    <p class="widget-subtitle">{{ .Params.content.sub_title }}</p>
+    {{ end }}
+
+    {{ range .Params.content.user_group }}
+      {{ $title := . | humanize | title }}
+      {{ $user_group := . | lower | replaceRE "[^a-zA-Z0-9]+" "-" }}
+      {{ $group_users := $.Site.Data.authors | where (printf "groups.%s" $user_group) | sort .name }}
+      {{ with $group_users }}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gx-3 gy-3 mb-3">
+
+        {{ range . }}
+          {{ partial "widgets/card.html" (dict "page" $.Page "widget" (dict "title" .Name "subtitle" .Affiliation "image" (.Params.avatar | default "img/author.png") "link" .Permalink)) }}
+        {{ end }}
+
+        </div>
+      {{ end }}
+    {{ end }}
+
+    {{ if .Params.design.show_interests }}
+    {{ partial "widgets/categories.html" (dict "page" $.Page "widget" (dict "categories" (sort .Params.content.user_group)) "type" "User group")) }}
+    {{ end }}
+  </div>
+
+{{ if .Params.id }}</div>{{ end }}
+{{/* /team */}}
