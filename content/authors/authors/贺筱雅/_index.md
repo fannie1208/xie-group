@@ -1,16 +1,16 @@
 ---
 # Display name
-title: 黄西
+title: 贺筱雅
 
 # Username (this should match the folder name)
 authors:
-  - 黄西
+  - 贺筱雅
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Assistant Professor
+role: PhD. Student
 
 # Organizations/Affiliations
 organizations:
@@ -54,7 +54,12 @@ email: ''
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
----
+  - PhD. Candidates
 
-Xi Huang is ...
+_build:
+  render: never
+cascade:
+  _build:
+    render: never
+    list: always
+---
