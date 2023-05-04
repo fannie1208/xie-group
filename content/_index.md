@@ -125,21 +125,6 @@ sections:
       title: Popular Topics
     design:
       columns: '2'
-  - block: team
-    id: team
-    content:
-      title: Meet the Team
-      user_group:
-        - Principal Investigators
-        - Researchers
-        - Grad Students
-        - Administration
-        - Visitors
-        - Alumni
-    design:
-      show_interests: false
-      show_role: true
-      show_social: true
   - block: contact
     id: contact
     content:
