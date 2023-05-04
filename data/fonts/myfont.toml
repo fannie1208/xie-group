@@ -1,0 +1,8 @@
+name = "Myfont"
+
+google_fonts = "family=Crimson+Text&family=Libre+Baskerville&family=Playfair+Display&family=Poppins&family=Source+Sans+Pro"
+
+heading_font = "Libre Baskerville"
+nav_font = "Poppins"
+body_font = "Poppins"
+mono_font = "Poppins"
